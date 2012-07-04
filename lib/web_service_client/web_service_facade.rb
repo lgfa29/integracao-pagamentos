@@ -8,13 +8,14 @@ module WebServiceClient
 		@@url_moip_autorizar_pagamento = "https://desenvolvedor.moip.com.br/sandbox/ws/alpha/AutorizarPagamento"
 		
 		def self.chamada_moip xml, tipo
-			if tipo == :instrucao_unica
+			case tipo
+			when :instrucao_unica
 				uri = URI.parse(@@url_moip_instrucao_unica)
 				request = Net::HTTP::Post.new(uri.path)
-			elsif tipo == :cancelar_pagamento
+			when :cancelar_pagamento
 				uri = URI.parse(@@url_moip_cancelar_pagamento)
 				request = Net::HTTP::Put.new(uri.path)
-			else
+			when :autorizar_pagamento
 				uri = URI.parse(@@url_moip_autorizar_pagamento)
 				request = Net::HTTP::Put.new(uri.path)
 			end

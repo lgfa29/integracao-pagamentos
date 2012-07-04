@@ -128,14 +128,15 @@ class MoipController < ApplicationController
 		codigo_pedido = params[:codigo_pedido]
 		acao = params[:acao]
 
-		if acao == 'autorizar'
+		case acao
+		when 'autorizar'
 			xml = %Q(
 				<AutorizarPagamento>
 					<Codigo>#{codigo_pedido}</Codigo>
 				</AutorizarPagamento>)
 			response = WebServiceClient::WebServiceFacade.chamada_moip xml, :autorizar_pagamento
 			mensagem_sucesso = 'Pagamento autorizado com sucesso.'
-		else
+		when 'cancelar'
 			xml = %Q(
 				<CancelarPagamento>
 					<Codigo>#{codigo_pedido}</Codigo>
