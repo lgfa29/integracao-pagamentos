@@ -49,7 +49,7 @@ class MoipController < ApplicationController
 		    </InstrucaoUnica>
 		</EnviarInstrucao>)
 
-		response = WebServiceClient::WebServiceFacade.chamada_moip xml, :instrucao_unica
+		response = WebServiceClient::WebServiceFacade.chamada_moip :instrucao_unica, xml
 		xml = Nokogiri::XML.parse(response.body)
 
 		status = xml.xpath('//Resposta/Status').text
@@ -97,7 +97,7 @@ class MoipController < ApplicationController
 		    </InstrucaoUnica>
 		</EnviarInstrucao>)
 
-		response = WebServiceClient::WebServiceFacade.chamada_moip xml, :instrucao_unica
+		response = WebServiceClient::WebServiceFacade.chamada_moip :instrucao_unica, xml
 		xml = Nokogiri::XML.parse(response.body)
 
 		status = xml.xpath('//Resposta/Status').text
@@ -134,21 +134,24 @@ class MoipController < ApplicationController
 				<AutorizarPagamento>
 					<Codigo>#{codigo_pedido}</Codigo>
 				</AutorizarPagamento>)
-			response = WebServiceClient::WebServiceFacade.chamada_moip xml, :autorizar_pagamento
+			response = WebServiceClient::WebServiceFacade.chamada_moip :autorizar_pagamento, xml
 			mensagem_sucesso = 'Pagamento autorizado com sucesso.'
+
 		when 'cancelar'
 			xml = %Q(
 				<CancelarPagamento>
 					<Codigo>#{codigo_pedido}</Codigo>
 				</CancelarPagamento>)
-			response = WebServiceClient::WebServiceFacade.chamada_moip xml, :cancelar_pagamento
+			response = WebServiceClient::WebServiceFacade.chamada_moip :cancelar_pagamento, xml
 			mensagem_sucesso = 'Pagamento cancelado com sucesso.'
 		end
+
 		xml = Nokogiri::XML.parse(response.body)
 
 		status = xml.xpath('//Resposta/Status').text
 		if status == 'Sucesso'
 			flash[:success] = mensagem_sucesso
+			tratar_dados_visualizar xml
 		else
 			flash[:error] = xml.xpath('//Resposta/Erro').text
 		end
