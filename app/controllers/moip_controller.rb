@@ -1,12 +1,6 @@
 # encoding: UTF-8
 
 class MoipController < ApplicationController
-	require 'nokogiri'
-	require 'net/http'
-
-	@@url = "https://desenvolvedor.moip.com.br/sandbox/ws/alpha/EnviarInstrucao/Unica"
-	@@token = "ZY8LQJPHOIDWQSSJZBE3SZD73TNNEEVZ"
-	@@chave = "ZBT6AW04HEYGIXZFCA7RKO28EFFI8G8MJEFKJOJC"
 
 	def index
 	end
@@ -55,19 +49,7 @@ class MoipController < ApplicationController
 		    </InstrucaoUnica>
 		</EnviarInstrucao>)
 
-		url = URI.parse(@@url)
-		key = Base64.encode64(@@token+":"+@@chave).gsub(/\s/i, '')
-
-		http = Net::HTTP.new(url.host, url.port)
-		http.use_ssl = true
-
-		request = Net::HTTP::Post.new(url.path)
-		request.body = xml
-		request.content_type = 'text/xml'
-		request['Authorization'] = "Basic "+key
-
-		response = http.request(request)
-
+		response = WebServiceClient::WebServiceFacade.chamada_moip xml, :instrucao_unica
 		xml = Nokogiri::XML.parse(response.body)
 
 		status = xml.xpath('//Resposta/Status').text
@@ -115,26 +97,12 @@ class MoipController < ApplicationController
 		    </InstrucaoUnica>
 		</EnviarInstrucao>)
 
-		url = URI.parse(@@url)
-		key = Base64.encode64(@@token+":"+@@chave).gsub(/\s/i, '')
-
-		http = Net::HTTP.new(url.host, url.port)
-		http.use_ssl = true
-
-		request = Net::HTTP::Post.new(url.path)
-		request.body = xml
-		request.content_type = 'text/xml'
-		request['Authorization'] = "Basic "+key
-
-		response = http.request(request)
-
-		puts response.body
-
+		response = WebServiceClient::WebServiceFacade.chamada_moip xml, :instrucao_unica
 		xml = Nokogiri::XML.parse(response.body)
 
-		@status = xml.xpath('//Resposta/Status').text
+		status = xml.xpath('//Resposta/Status').text
 
-		if @status == 'Sucesso'
+		if status == 'Sucesso'
 			token = xml.xpath('//Resposta/Token').text
 			redirect_to :action => 'checkout_transparente_pagamento', :token => token
 		else
@@ -151,5 +119,39 @@ class MoipController < ApplicationController
 		@codigo_moip = params["codigo_moip"]
 		@total_pago = params["total_pago"]
 		@url = params["url"]
+	end
+
+	def autorizar_ou_cancelar_pedido
+	end
+
+	def realizar_acao
+		codigo_pedido = params[:codigo_pedido]
+		acao = params[:acao]
+
+		if acao == 'autorizar'
+			xml = %Q(
+				<AutorizarPagamento>
+					<Codigo>#{codigo_pedido}</Codigo>
+				</AutorizarPagamento>)
+			response = WebServiceClient::WebServiceFacade.chamada_moip xml, :autorizar_pagamento
+			mensagem_sucesso = 'Pagamento autorizado com sucesso.'
+		else
+			xml = %Q(
+				<CancelarPagamento>
+					<Codigo>#{codigo_pedido}</Codigo>
+				</CancelarPagamento>)
+			response = WebServiceClient::WebServiceFacade.chamada_moip xml, :cancelar_pagamento
+			mensagem_sucesso = 'Pagamento cancelado com sucesso.'
+		end
+		xml = Nokogiri::XML.parse(response.body)
+
+		status = xml.xpath('//Resposta/Status').text
+		if status == 'Sucesso'
+			flash[:success] = mensagem_sucesso
+		else
+			flash[:error] = xml.xpath('//Resposta/Erro').text
+		end
+
+		redirect_to :action => 'autorizar_ou_cancelar_pedido'
 	end
 end
