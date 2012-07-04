@@ -1,0 +1,699 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"botao-",
+				"botao-voltar"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"id",
+				"id_header"
+			],
+			[
+				"fi",
+				"fita-menor-verde"
+			],
+			[
+				"fita",
+				"fita-menor"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"par",
+				"partial"
+			],
+			[
+				"con",
+				"container2"
+			],
+			[
+				"detal",
+				"detalhes-produto"
+			],
+			[
+				"pro",
+				"produto_econovia"
+			],
+			[
+				"cai",
+				"caixa-de-busca"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"ci",
+				"cinzaEscuro"
+			],
+			[
+				"bota",
+				"botao-adicionar-produto"
+			],
+			[
+				"cinza",
+				"cinzaClaro"
+			],
+			[
+				"cinz",
+				"cinzaClaro"
+			],
+			[
+				"cin",
+				"cinzaEscuro"
+			],
+			[
+				"linkar",
+				"linkar_produto"
+			],
+			[
+				"for",
+				"formulario-filtro"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"botao",
+				"botao-link"
+			],
+			[
+				"cor",
+				"corSecundariaClara"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"barra-me",
+				"barra-menu-flutuante"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"lege",
+				"legenda-laranja"
+			],
+			[
+				"barra-busca",
+				"barra-busca-flutuante"
+			],
+			[
+				"Comp",
+				"Computer"
+			],
+			[
+				"be",
+				"be_in_role"
+			],
+			[
+				"assi",
+				"assign_role"
+			],
+			[
+				"mul",
+				"multiply"
+			],
+			[
+				"mu",
+				"multiply"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 213.0,
+		"selected_items":
+		[
+			[
+				"sas",
+				"Set Syntax: Sass"
+			],
+			[
+				"co",
+				"Color picker"
+			],
+			[
+				"colo",
+				"Color picker"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"pack re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack li",
+				"Package Control: List Packages"
+			],
+			[
+				"pa i",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pack co in",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"pac ins",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"cs",
+				"Set Syntax: CSS"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/application.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/home/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/jCarousel.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/bootstrap.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_detalhes_produto_selecionado.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_buscar_produto_econovia.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_formulario_adicionar_produto.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_produto_econovia_selecionado.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/scrapper/_detalhes_produto_econovia.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/scrapper/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/admin/scrapper.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/admin/produtos.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/admin/scrapper/_detalhes_produto_selecionado.html.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/layout.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/admin.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/variaveis.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/form.css.scss",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/admin/categorias.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/layouts/admin.html.erb",
+		"/Users/codus/Projetos/Econovia/app/controllers/admin/scrapper_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/scrapper/_produtos_econovia_relacionados.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/layouts/application.html.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/mixins.css.scss",
+		"/Users/codus/Projetos/Econovia/config/database.yml",
+		"/Users/codus/Projetos/Econovia/config/routes.rb",
+		"/Users/codus/Projetos/Econovia/app/helpers/application_helper.rb",
+		"/Users/codus/Projetos/Econovia/app/controllers/admin/produtos_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/controllers/produtos_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/fornecedores/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_linkar_produtos_externos.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_produto_econovia.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_linkar_produto.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/categorias/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/_buscar_produto.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/_botoes_barra_menu.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/produtos.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/produtos/visualizar.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/produtos/linkar.html.erb",
+		"/Users/codus/Projetos/Econovia/app/controllers/admin/categorias_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/scrapper/index.erb.html",
+		"/Users/codus/Projetos/Econovia/app/views/produtos/buscar_por_categoria.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/admin/_botoes_barra_menu",
+		"/Users/codus/Projetos/Econovia/app/views/produtos/buscar.html.erb",
+		"/Users/codus/Projetos/Econovia/tmp/cache/sass/2627659a1f95c9673dd30f252afb095655681263/produtos.css.scssc",
+		"/Users/codus/Projetos/Econovia/app/controllers/admin_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/views/produtos/_categorias_encontradas.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/shared/_barra_categorias.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/admin-categorias.css.scss",
+		"/Users/codus/Projetos/Econovia/app/controllers/application_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/controllers/busca_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/controllers/admin/admin_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/home.css.scss",
+		"/Users/codus/Projetos/Econovia/app/views/usuarios/cadastrar.html.erb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/usuarios.css.scss",
+		"/Users/codus/Projetos/Econovia/app/controllers/home_controller.rb",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/jCarousel.css.scss.css",
+		"/Users/codus/Projetos/Econovia/app/views/busca/buscar.html.erb",
+		"/Users/codus/Projetos/Econovia/Gemfile",
+		"/Users/codus/Projetos/Econovia/app/views/busca/index.html.erb",
+		"/Users/codus/Projetos/Econovia/app/views/shared/_barra_categoria",
+		"/Users/codus/Projetos/Econovia/.Bundle/config",
+		"/Users/codus/Projetos/Econovia/bundle/config",
+		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/jCarousel.css",
+		"/Users/codus/Projetos/Econovia/app/controllers/busca_controller",
+		"/Users/codus/Projetos/Econovia/app/assets/javascripts/application.js",
+		"/Users/codus/Projetos/codus_estudo/luiz.aoqui/todo/app/views/users/_form.html.erb",
+		"/Users/codus/Projetos/codus_estudo/luiz.aoqui/todo/Gemfile",
+		"/Users/codus/Projetos/codus_estudo/luiz.aoqui/rspec_tutorial/user.rb",
+		"/Users/codus/Projetos/codus_estudo/luiz.aoqui/rspec_tutorial/user_spec.rb",
+		"/Users/codus/Documents/learn_ruby/02_calculator/calculator_spec.rb",
+		"/Users/codus/Documents/learn_ruby/02_calculator/calculator.rb",
+		"/Users/codus/Documents/learn_ruby/01_temperature/temperature_spec.rb",
+		"/Users/codus/Documents/learn_ruby/00_hello/hello.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<button>Conferir</button>",
+			"<p class=\"desconto\">\n					Economia de <big>67%</big>\n				</p>",
+			"<a class=\"etiqueta-laco\">\n					<div class=\"etiqueta\">\n						<p class=\"desconto\">\n							<big>67%</big><br />DE DESCONTO\n						</p>\n					</div>\n				</a>",
+			"a",
+			"<a href=\"detalhes.html\"><%=image_tag \"tv.jpg\"%></a>\n				<p class=\"nome-produto\"><a href=\"detalhes.html\">Produto 1</a></p>\n				<p class=\"preco-a-vista\"><big>R$ 45,50</big></p> \n				<p><b>ou</b> <span class=\"preco-a-prazo\">10x R$4,50</span></p>\n				<div class=\"etiqueta-laco\">\n					<div class=\"etiqueta\">\n						<p class=\"desconto\">\n							<big>67%</big><br />DE DESCONTO\n						</p>\n					</div>\n				</div>",
+			"<div class=\"etiqueta-laco\">\n					<div class=\"etiqueta\">\n						<p class=\"desconto\">\n							<big>67%</big><br />DE DESCONTO\n						</p>\n					</div>\n				</div>",
+			"<p class=\"desconto\">\n					<big>67%</big><br />DE DESCONTO\n				</p>",
+			"444",
+			"background-image",
+			"div",
+			"scroll",
+			"button",
+			"botao",
+			"id=",
+			"caixa-titulo",
+			"id=",
+			"id",
+			"$.get",
+			"content_for",
+			"yield",
+			"content_for",
+			"tfoot",
+			"caixa-e",
+			"render",
+			"\"link\"",
+			"link",
+			"button",
+			"content_for",
+			"render",
+			"content_for",
+			"content-for",
+			"[",
+			"content:",
+			"textarea",
+			"text-area",
+			"class=\"categoria\"",
+			"cate",
+			"content_for",
+			"selec",
+			"selecionado",
+			"layout",
+			"button ",
+			"font-size: 11",
+			"font-size:",
+			"font-size",
+			"11",
+			"11px",
+			"small",
+			"preco-pa",
+			"header",
+			"escudo",
+			"fita",
+			"flui",
+			":before",
+			"; \">",
+			"min-width",
+			"linha-pontilhada",
+			"@include fita",
+			"separa",
+			"container",
+			"fluid",
+			"width: 100%",
+			"100%",
+			"end"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"homein",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"formadi",
+				"app/views/admin/produtos/_formulario_adicionar_produto.html.erb"
+			],
+			[
+				"busproe",
+				"app/views/admin/produtos/_buscar_produto_econovia.html.erb"
+			],
+			[
+				"admprin",
+				"app/views/admin/produtos/index.html.erb"
+			],
+			[
+				"addetapr",
+				"app/views/admin/produtos/_detalhes_produto_selecionado.html.erb"
+			],
+			[
+				"admidetaprodsle",
+				"app/views/admin/produtos/_detalhes_produto_selecionado.html.erb"
+			],
+			[
+				"adpdepro",
+				"app/views/admin/scrapper/_detalhes_produto_econovia.html.erb"
+			],
+			[
+				"admprodsele",
+				"app/views/admin/produtos/_produto_econovia_selecionado.html.erb"
+			],
+			[
+				"_bus",
+				"app/views/admin/produtos/_buscar_produto_econovia.html.erb"
+			],
+			[
+				"admiprodfor",
+				"app/views/admin/produtos/_formulario_adicionar_produto.html.erb"
+			],
+			[
+				"adminscra",
+				"app/views/admin/scrapper/_detalhes_produto_selecionado.html.erb"
+			],
+			[
+				"adadicio",
+				"app/views/admin/produtos/_formulario_adicionar_produto.html.erb"
+			],
+			[
+				"adprodde",
+				"app/views/admin/produtos/_detalhes_produto_selecionado.html.erb"
+			],
+			[
+				"lay",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"admin",
+				"app/views/layouts/admin.html.erb"
+			],
+			[
+				"layoad",
+				"app/views/layouts/admin.html.erb"
+			],
+			[
+				"layadmi",
+				"app/views/layouts/admin.html.erb"
+			],
+			[
+				"mix",
+				"app/assets/stylesheets/mixins.css.scss"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"adprodcon",
+				"app/controllers/admin/produtos_controller.rb"
+			],
+			[
+				"proco",
+				"app/controllers/produtos_controller.rb"
+			],
+			[
+				"scra",
+				"app/controllers/admin/scrapper_controller.rb"
+			],
+			[
+				"admin.ht",
+				"app/views/layouts/admin.html.erb"
+			],
+			[
+				"prodin",
+				"app/views/admin/produtos/index.html.erb"
+			],
+			[
+				"mi",
+				"app/assets/stylesheets/mixins.css.scss"
+			],
+			[
+				"adprocon",
+				"app/controllers/admin/produtos_controller.rb"
+			],
+			[
+				"procon",
+				"app/controllers/produtos_controller.rb"
+			],
+			[
+				"adm",
+				"app/assets/stylesheets/admin.css.scss"
+			],
+			[
+				"prodhtml",
+				"app/views/admin/produtos/index.html.erb"
+			],
+			[
+				"vari",
+				"app/assets/stylesheets/variaveis.css.scss"
+			],
+			[
+				"scrin",
+				"app/views/admin/scrapper/index.html.erb"
+			],
+			[
+				"inde",
+				"app/views/admin/scrapper/index.html.erb"
+			],
+			[
+				"va",
+				"app/assets/stylesheets/variaveis.css.scss"
+			],
+			[
+				"boots",
+				"app/assets/stylesheets/bootstrap.css.scss"
+			],
+			[
+				"prod",
+				"app/assets/stylesheets/produtos.css.scss"
+			],
+			[
+				"proscs",
+				"app/assets/stylesheets/produtos.css.scss"
+			],
+			[
+				"prodscc",
+				"tmp/cache/sass/2627659a1f95c9673dd30f252afb095655681263/produtos.css.scssc"
+			],
+			[
+				"la",
+				"app/assets/stylesheets/layout.css.scss"
+			],
+			[
+				"appl",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"cada",
+				"app/views/usuarios/cadastrar.html.erb"
+			],
+			[
+				"index",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"visu",
+				"app/views/produtos/visualizar.html.erb"
+			],
+			[
+				"mixn",
+				"app/assets/stylesheets/mixins.css.scss"
+			],
+			[
+				"app",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true
+}

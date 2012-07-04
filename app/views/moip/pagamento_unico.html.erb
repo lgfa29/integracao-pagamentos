@@ -1,0 +1,56 @@
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+
+<%= form_tag "realizar_pagamento_unico", :method => "get" do %>
+	<div class="row">
+		<fieldset class="span6">
+			<legend>Dados Pessoais</legend>
+
+			<%= label_tag(:nome, "Nome:") %>
+			<%= text_field_tag(:nome) %>
+			
+			<%= label_tag(:email, "E-mail:") %>
+			<%= text_field_tag(:email) %>
+			
+			<%= label_tag(:celular, "Celular:") %>
+			<%= text_field_tag(:celular) %>
+			
+			<%= label_tag(:cpf, "CPF:") %>
+			<%= text_field_tag(:cpf) %>
+		</fieldset>
+
+		<fieldset class="span6">
+			<legend>Endereço</legend>
+
+			<%= label_tag(:logradouro, "Logradouro:") %>
+			<%= text_field_tag(:logradouro) %>
+			
+			<%= label_tag(:numero, "Numero:") %>
+			<%= text_field_tag(:numero) %>
+			
+			<%= label_tag(:complemento, "Complemento:") %>
+			<%= text_field_tag(:complemento) %>
+			
+			<%= label_tag(:bairro, "Bairro:") %>
+			<%= text_field_tag(:bairro) %>
+
+			<%= label_tag(:cidade, "Cidade:") %>
+			<%= text_field_tag(:cidade) %>
+			
+			<%= label_tag(:estado, "Estado:") %>
+			<%= text_field_tag(:estado) %>
+			
+			<%= label_tag(:cep, "CEP:") %>
+			<%= text_field_tag(:cep) %>
+			
+			<%= label_tag(:telefone, "Telefone:") %>
+			<%= text_field_tag(:telefone) %>
+		</fieldset>
+	</div>
+
+	<div class="row" style="text-align: right;">
+		<%= link_to "Voltar", :action => 'index' %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= submit_tag("Pagar", :class => "btn") %>
+	</div>
+
+<% end %>

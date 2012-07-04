@@ -1,0 +1,16 @@
+<span style="text-align: center">
+	<h1 class="alert alert-success">Operação realizada com sucesso.</h1>
+
+	<h2>
+		O valor pago foi de <span class="well" style="padding: 5px;"><%= number_to_currency(@total_pago, :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %></span>.
+	</h2>
+	<br />
+	<h2>
+		O código do seu pagamento é <span class="well" style="padding: 5px;"><%= @codigo_moip %></span>.
+	</h2>
+	<br />
+	<h3>Para mais informações consulte o endereço: <a href="<%= @url %>"><%= @url %></a></h3>
+
+	<br />
+	<div><%= link_to 'Voltar', {:action => 'index'}, :class => 'btn btn-primary' %></div>
+</span>

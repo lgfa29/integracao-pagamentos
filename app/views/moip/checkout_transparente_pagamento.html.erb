@@ -1,0 +1,99 @@
+<script type='text/javascript' src='https://desenvolvedor.moip.com.br/sandbox/transparente/MoipWidget-v2.js' charset='ISO-8859-1'></script>
+
+<div id="MoipWidget" 
+            data-token="<%= @token %>"
+            callback-method-success="funcao_sucesso" 
+            callback-method-error="funcao_falha"></div>
+
+<p class="alert alert-error" id="erro" style="display: none;"><%= flash[:error] %></p>
+
+
+<%= form_tag "", {:onsubmit => 'processaPagtoCredito(); return false;' } do %>
+	<div class="row">
+		<fieldset class="span6">
+			<legend>Cartão de Crédito</legend>
+
+			<%= label_tag(:bandeira, "Bandeira:") %>
+			<select id="bandeira" name="bandeira">
+				<option value=""></option>
+				<option value="Visa">Visa</option>
+				<option value="Mastercard">Mastercard</option>
+				<option value="Diners">Diners</option>
+				<option value="America Express">America Express</option>
+				<option value="Hipercard">Hipercard</option>
+			</select>
+
+			<%= label_tag(:numero, "Número:") %>
+			<%= text_field_tag(:numero) %>
+			
+			<%= label_tag(:data_validade, "Data de Validade:") %>
+			<%= text_field_tag(:data_validade) %>
+
+			<%= label_tag(:codigo_seguranca, "Código de Segurança:") %>
+			<%= text_field_tag(:codigo_seguranca) %>
+
+		</fieldset>
+
+		<fieldset class="span6">
+			<legend>Portador</legend>
+
+			<%= label_tag(:nome, "Nome:") %>
+			<%= text_field_tag(:nome) %>
+
+			<%= label_tag(:data_nascimento, "Data de Nascimento:") %>
+			<%= text_field_tag(:data_nascimento) %>
+
+			<%= label_tag(:telefone, "Telefone:") %>
+			<%= text_field_tag(:telefone) %>
+
+			<%= label_tag(:cpf, "CPF:") %>
+			<%= text_field_tag(:cpf) %>
+		</fieldset>
+
+	<div class="row" style="text-align: right;">
+		<%= link_to "Voltar", :action => 'index' %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= submit_tag("Pagar", :class => "btn") %>
+	</div>
+
+<% end %>
+
+<script type="text/javascript">
+	function processaPagtoCredito() {
+		var settings = {
+			"Forma": "CartaoCredito",
+			"Instituicao": $('#bandeira').val(),
+			"Parcelas": "1",
+			"Recebimento": "AVista",
+			"CartaoCredito": {
+				"Numero": $('#numero').val(),
+				"Expiracao": $('#data_validade').val(),
+				"CodigoSeguranca": $('#codigo_seguranca').val(),
+				"Portador": {
+					"Nome": $('#nome').val(),
+					"DataNascimento": $('#data_nascimento').val(),
+					"Telefone": $('#telefone').val(),
+					"Identidade": $('#cpf').val()
+                }
+            }
+        }
+        MoipWidget(settings);
+    }
+
+    var funcao_sucesso = function(data){
+    	window.location.href="checkout_transparente_finalizado?codigo_moip="+data.CodigoMoIP+"&total_pago="+data.TotalPago+"&url="+data.url;
+    };
+
+    var funcao_falha = function(data) {
+    	if (data.length) {
+	    	var msg = '<ul>';
+	    	for (var i in data) {
+	    		msg += '<li>'+data[i].Mensagem+'</li>';
+	    	}
+	    	msg += '</ul>';
+	    } else {
+	    	var msg = data.Mensagem;
+	    }
+
+    	$('#erro').show();
+    	$('#erro').html(msg);
+	};
+</script>
