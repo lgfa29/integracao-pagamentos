@@ -29,6 +29,7 @@
 	</div>
 
 	<div class="row" style="text-align: right;">
-		<%= link_to "Voltar", :action => 'index' %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= submit_tag("Enviar", :class => "btn") %>
+		<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
+		<%= submit_tag("Enviar", :class => "btn btn-primary") %>
 	</div>
 <% end %>

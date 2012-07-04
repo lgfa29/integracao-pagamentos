@@ -55,7 +55,8 @@
 		</fieldset>
 
 	<div class="row" style="text-align: right;">
-		<%= link_to "Voltar", :action => 'index' %> &nbsp;&nbsp;|&nbsp;&nbsp; <%= submit_tag("Pagar", :class => "btn") %>
+		<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
+		<%= submit_tag("Pagar", :class => "btn btn-primary") %>
 	</div>
 
 <% end %>
