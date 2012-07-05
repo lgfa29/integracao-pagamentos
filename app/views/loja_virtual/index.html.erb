@@ -1,4 +1,34 @@
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+
 <div class="page-header">
 	<h1>Loja Virtual</h1>
 </div>
 
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Festa</th>
+			<th>Local</th>
+			<th>Data</th>
+			<th>Comprar</th>
+		</tr>
+	</thead>
+
+	<tbody>
+<% @festas.each do |festa| %>
+		<tr>
+			<td>
+				<%= link_to festa.nome, :action => 'detalhes', :id => festa.id %>
+			</td>
+			<td><%= festa.data %></td>
+			<td><%= festa.local %></td>
+			<td>Comprar</td>
+		</tr>
+<% end %>
+	</tbody>
+
+</table>
+
+<%= link_to "Voltar", { :controller => 'home', :action => 'index' }, :class => "btn" %>

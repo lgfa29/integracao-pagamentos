@@ -1,0 +1,35 @@
+<div class="page-header">
+	<h1>Loja Virtual</h1>
+</div>
+
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+<% if flash[:success] %>
+	<p class="alert alert-success"><%= flash[:success] %></p>
+<% end %>
+
+<div class="hero-unit">
+	<h3><%= @festa.nome %> - <%= @festa.data %></h3>
+	<p><%= @festa.descricao %></p>
+	<p>
+		Apenas <b>
+			<%= number_to_currency(@festa.preco, :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %>
+		</b>
+	</p>
+
+	<%= link_to (image_tag'https://www.paypal.com/pt_BR/i/btn/btn_dg_pay_w_paypal.gif'), {:controller => 'loja_virtual', :action => 'checkout', :id => @festa.id}, :id => "submitBtn"  %>
+</div>
+
+<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
+
+<% content_for :javascript do %>
+
+	<script type="text/javascript" src="https://www.paypalobjects.com/js/external/dg.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var dg = new PAYPAL.apps.DGFlow({ trigger: "submitBtn"});
+		});
+	</script>
+
+<% end %>
