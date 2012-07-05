@@ -2,5 +2,6 @@
 
 class LojaVirtualController < ApplicationController
 	def index
+		
 	end
 end
