@@ -1,0 +1,26 @@
+<% content_for :javascript do %>
+
+	<script type="text/javascript" src="https://www.paypalobjects.com/js/external/dg.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var dg = new PAYPAL.apps.DGFlow({ trigger: "submitBtn"});
+		});
+	</script>
+
+<% end %>
+
+<div class="page-header">
+	<h1>Digital Goods com Express Checkout</h1>
+</div>
+
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+<% if flash[:success] %>
+	<p class="alert alert-success"><%= flash[:success] %></p>
+<% end %>
+
+<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
+<a href="checkout" id="submitBtn">
+	<img src="https://www.paypal.com/pt_BR/i/btn/btn_dg_pay_w_paypal.gif" />
+</a>

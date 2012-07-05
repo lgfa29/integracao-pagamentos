@@ -1,0 +1,26 @@
+<div class="page-header">
+	<h1>Estornar Transferência</h1>
+</div>
+
+<% if flash[:success] %>
+	<p class="alert alert-success"><%= flash[:success] %></p>
+<% end %>
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+
+<%= form_tag "realizar_estorno", :method => "post" do %>
+	<div class="row">
+		<fieldset class="span12">
+			<legend>Dados da Transferência</legend>
+
+			<%= label_tag(:id_transferencia, "ID da Transferência:") %>
+			<%= text_field_tag(:id_transferencia) %>
+		</fieldset>
+
+	<div class="row" style="text-align: right;">
+		<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
+		<%= submit_tag("Estornar", :class => "btn btn-primary") %>
+	</div>
+
+<% end %>
