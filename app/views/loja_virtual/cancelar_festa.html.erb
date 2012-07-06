@@ -1,10 +1,11 @@
 <div class="page-header">
-	<h1>Cancelar Festas</h1>
+	<h1>Loja Virtual</h1>
 </div>
 
 <ul class="nav nav-tabs">
 	<li><%= link_to "Comprar Festa", :action => 'lista' %></li>
 	<li class="active"><%= link_to "Cancelar Festa", :action => 'cancelar_festa' %></li>
+	<li><%= link_to "Listar Pedidos", :action => 'lista_pedidos' %></li>
 </ul>
 
 <% if flash[:success] %>

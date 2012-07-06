@@ -59,7 +59,8 @@ class LojaVirtualController < ApplicationController
 		if response['ACK'] == 'Success'
 			Pedido.create({
 				:id_transacao => response['PAYMENTINFO_0_TRANSACTIONID'],
-				:id_produto => @festa.id })
+				:id_produto => @festa.id,
+				:estornado => false })
 			
 			redirect_to :action => 'concluido'
 		else
@@ -76,6 +77,7 @@ class LojaVirtualController < ApplicationController
 		flash[:success] = "Pedido cancelado."
 		render :action => 'concluido'
 	end
+
 
 	def cancelar_festa
 		@festas_ativas = Produto.where(:ativo => true)
@@ -107,6 +109,11 @@ class LojaVirtualController < ApplicationController
 		redirect_to :action => 'cancelar_festa'
 	end
 
+
+	def lista_pedidos
+		@pedidos = Pedido.all
+	end
+
 	private
 		def reembolsar_compradores id_produto
 			Pedido.where(:id_produto => id_produto).each do |pedido|
@@ -116,10 +123,12 @@ class LojaVirtualController < ApplicationController
 				}
 				
 				response = WebServiceClient::WebServiceFacade.chamada_paypal 'RefundTransaction', dados_chamada
-
 				if response['ACK'] != 'Success'
 					raise "Erro #{response['L_ERRORCODE0']}: #{response['L_SHORTMESSAGE0']}. #{response['L_LONGMESSAGE0']}"
 				end
+
+				pedido.estornado = true
+				pedido.save
 			end
 
 		end
