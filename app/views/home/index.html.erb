@@ -2,8 +2,8 @@
 	<h1>Testes de Integração com Meios de Pagamento</h1>
 </div>
 
-<div class="btn-group">
-	<%= link_to "MoIP", { :controller => 'moip', :action => 'index' }, :class => 'btn btn-primary' %>
-	<%= link_to "PayPal", { :controller => 'paypal', :action => 'index' }, :class => 'btn btn-primary' %>
-	<%= link_to "Loja Virtual", { :controller => 'loja_virtual', :action => 'index' }, :class => 'btn btn-primary' %>
-</div>
+<ul class="nav nav-pills">
+	<li><%= link_to "MoIP", { :controller => 'moip', :action => 'index' } %></li>
+	<li><%= link_to "PayPal", { :controller => 'paypal', :action => 'index' } %></li>
+	<li><%= link_to "Loja Virtual", { :controller => 'loja_virtual', :action => 'index' } %></li>
+</ul>

@@ -1,0 +1,46 @@
+<div class="page-header">
+	<h1>Loja Virtual</h1>
+</div>
+
+<ul class="nav nav-tabs">
+	<li class="active"><%= link_to "Comprar Festa", :action => 'lista' %></li>
+	<li><%= link_to "Cancelar Festa", :action => 'cancelar_festa' %></li>
+</ul>
+
+<% if flash[:success] %>
+	<p class="alert alert-success"><%= flash[:success] %></p>
+<% end %>
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Festa</th>
+			<th>Data</th>
+			<th>Local</th>
+			<th>Preço</th>
+			<th>Comprar</th>
+		</tr>
+	</thead>
+
+	<tbody>
+<% @festas.each do |festa| %>
+		<tr>
+			<td>
+				<%= link_to festa.nome, :action => 'detalhes', :id => festa.id %>
+			</td>
+			<td><%= festa.data %></td>
+			<td><%= festa.local %></td>
+			<td>
+				<%= number_to_currency(festa.preco, :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %>
+			</td>
+			<td>Comprar</td>
+		</tr>
+<% end %>
+	</tbody>
+
+</table>
+
+<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>

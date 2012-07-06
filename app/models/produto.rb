@@ -8,6 +8,7 @@ class Produto
 	field :mes, :type => Integer
 	field :ano, :type => Integer
 	field :preco, :type => String
+	field :ativo, :type => Boolean
 
 	def data
 		return sprintf("%02d", self.dia)+'/'+sprintf("%02d", self.mes)+'/'+self.ano.to_s

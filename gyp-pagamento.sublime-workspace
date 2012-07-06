@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"ima",
+				"image_tag  (function)"
+			],
+			[
+				"ran",
+				"rand"
+			],
+			[
+				"res",
+				"response_hash"
+			],
+			[
+				"nvp",
+				"paypal_nvp_url"
+			],
+			[
+				"signa",
+				"paypal_signature"
+			],
+			[
+				"com",
+				"complemento"
+			],
+			[
+				"xp",
+				"xpath"
+			],
+			[
+				"xm",
+				"xml_response"
+			],
+			[
+				"tra",
+				"tratar_dados_visualizar"
+			],
+			[
+				"can",
+				"cancelar_pedido"
+			],
+			[
+				"data",
+				"data_nascimento"
+			],
+			[
+				"co",
+				"codigo_seguranca"
+			],
+			[
+				"chck",
+				"checkout_transparente_pagamento"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-color:   (property)"
+			],
+			[
 				"fon",
 				"font-size"
 			],
@@ -183,7 +243,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 213.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -243,7 +303,7 @@
 				"Set Syntax: CSS"
 			]
 		],
-		"width": 449.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -260,6 +320,54 @@
 	},
 	"file_history":
 	[
+		"/Users/codus/Projetos/gyp-pagamento/app/views/loja_virtual/detalhes.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/loja_virtual/index.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/controllers/loja_virtual_controller.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/loja_virtual/concluido.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/loja_virtual/lista.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/lib/tasks/popular.rake",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/home/index.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/controllers/paypal_controller.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/digital_goods_express_checkout.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/index.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/models/produto.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/models/pedido.rb",
+		"/Users/codus/Projetos/gyp-pagamento/lib/web_service_client/web_service_facade.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/autorizar_ou_cancelar_pedido.html.erb",
+		"/Users/codus/Projetos/GiulianaFlores/app/helpers/application_helper.rb",
+		"/Users/codus/Projetos/gyp-pagamento/config/environments/development.rb",
+		"/Users/codus/Projetos/gyp-pagamento/config/application.rb",
+		"/Users/codus/Projetos/gyp-pagamento/config/environments/test.rb",
+		"/Users/codus/Projetos/gyp-pagamento/Gemfile",
+		"/Users/codus/Projetos/gyp-pagamento/config/mongoid.yml",
+		"/Users/codus/Projetos/gyp-pagamento/config/initializers/wrap_parameters.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/assets/javascripts/application.js",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/estorno.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/pagamento_unico.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/concluido.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/cancelar.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/layouts/application.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/confirmar.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/controllers/moip_controller.rb",
+		"/Users/codus/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/complete.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/confirm.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/paypal/erro.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/checkout_transparente.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/checkout_transparente_pagamento.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/controllers/home_controller.rb",
+		"/Users/codus/Projetos/gyp-pagamento/config/routes.rb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/index.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/public/index.html",
+		"/Users/codus/Projetos/gyp-pagamento/app/assets/stylesheets/application.css",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/cancelar_pedido.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/app/views/moip/checkout_transparente_finalizado.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/teste.rb",
+		"/Users/codus/Projetos/GiulianaFlores/app/assets/stylesheets/mobile/estrutura.scss",
+		"/Users/codus/Projetos/GiulianaFlores/app/assets/stylesheets/mobile.css.erb.scss",
+		"/Users/codus/Projetos/GiulianaFlores/app/assets/stylesheets/application.scss",
+		"/Users/codus/Projetos/GiulianaFlores/app/views/layouts/mobile.html.erb",
+		"/Users/codus/Projetos/gyp-pagamento/gyp-pagamento.sublime-project",
 		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/application.css.scss",
 		"/Users/codus/Projetos/Econovia/app/views/home/index.html.erb",
 		"/Users/codus/Projetos/Econovia/app/assets/stylesheets/jCarousel.css.scss",
@@ -341,7 +449,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -352,6 +460,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"inde",
+			"index",
+			"error",
+			"preco",
+			" @",
+			"active_record",
+			"flash[:error",
+			"'\n",
+			"url",
 			"<button>Conferir</button>",
 			"<p class=\"desconto\">\n					Economia de <big>67%</big>\n				</p>",
 			"<a class=\"etiqueta-laco\">\n					<div class=\"etiqueta\">\n						<p class=\"desconto\">\n							<big>67%</big><br />DE DESCONTO\n						</p>\n					</div>\n				</a>",
@@ -436,11 +553,6 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"sheets":
-			[
-			]
 		}
 	],
 	"incremental_find":
@@ -460,12 +572,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -476,7 +582,6 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
@@ -491,6 +596,162 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"lojacontr",
+				"app/controllers/loja_virtual_controller.rb"
+			],
+			[
+				"locon",
+				"app/views/loja_virtual/concluido.html.erb"
+			],
+			[
+				"homin",
+				"app/views/home/index.html.erb"
+			],
+			[
+				"pop",
+				"lib/tasks/popular.rake"
+			],
+			[
+				"deta",
+				"app/views/loja_virtual/detalhes.html.erb"
+			],
+			[
+				"lojain",
+				"app/views/loja_virtual/index.html.erb"
+			],
+			[
+				"loconcl",
+				"app/views/loja_virtual/concluido.html.erb"
+			],
+			[
+				"lo",
+				"app/controllers/loja_virtual_controller.rb"
+			],
+			[
+				"payp",
+				"app/controllers/paypal_controller.rb"
+			],
+			[
+				"pro",
+				"app/models/produto.rb"
+			],
+			[
+				"pay",
+				"app/controllers/paypal_controller.rb"
+			],
+			[
+				"loj",
+				"app/controllers/loja_virtual_controller.rb"
+			],
+			[
+				"face",
+				"lib/web_service_client/web_service_facade.rb"
+			],
+			[
+				"loin",
+				"app/views/loja_virtual/index.html.erb"
+			],
+			[
+				"tes",
+				"config/environments/test.rb"
+			],
+			[
+				"deve",
+				"config/environments/development.rb"
+			],
+			[
+				"appl",
+				"config/application.rb"
+			],
+			[
+				"dev",
+				"config/environments/development.rb"
+			],
+			[
+				"test",
+				"config/environments/test.rb"
+			],
+			[
+				"app",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"apl",
+				"config/application.rb"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
+			[
+				"appli",
+				"config/application.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"payc",
+				"app/controllers/paypal_controller.rb"
+			],
+			[
+				"paco",
+				"app/controllers/paypal_controller.rb"
+			],
+			[
+				"pacon",
+				"app/controllers/paypal_controller.rb"
+			],
+			[
+				"expre",
+				"app/views/paypal/digital_goods_express_checkout.html.erb"
+			],
+			[
+				"pain",
+				"app/views/paypal/index.html.erb"
+			],
+			[
+				"fac",
+				"lib/web_service_client/web_service_facade.rb"
+			],
+			[
+				"la",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"faca",
+				"lib/web_service_client/web_service_facade.rb"
+			],
+			[
+				"puin",
+				"public/index.html"
+			],
+			[
+				"inde",
+				"app/views/moip/index.html.erb"
+			],
+			[
+				"mocon",
+				"app/controllers/moip_controller.rb"
+			],
+			[
+				"moco",
+				"app/controllers/moip_controller.rb"
+			],
+			[
+				".css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
 			[
 				"homein",
 				"app/views/home/index.html.erb"
@@ -564,10 +825,6 @@
 				"app/assets/stylesheets/mixins.css.scss"
 			],
 			[
-				"rou",
-				"config/routes.rb"
-			],
-			[
 				"adprodcon",
 				"app/controllers/admin/produtos_controller.rb"
 			],
@@ -616,10 +873,6 @@
 				"app/views/admin/scrapper/index.html.erb"
 			],
 			[
-				"inde",
-				"app/views/admin/scrapper/index.html.erb"
-			],
-			[
 				"va",
 				"app/assets/stylesheets/variaveis.css.scss"
 			],
@@ -638,14 +891,6 @@
 			[
 				"prodscc",
 				"tmp/cache/sass/2627659a1f95c9673dd30f252afb095655681263/produtos.css.scssc"
-			],
-			[
-				"la",
-				"app/assets/stylesheets/layout.css.scss"
-			],
-			[
-				"appl",
-				"app/views/layouts/application.html.erb"
 			],
 			[
 				"rout",
@@ -668,16 +913,8 @@
 				"app/assets/stylesheets/mixins.css.scss"
 			],
 			[
-				"app",
-				"app/assets/javascripts/application.js"
-			],
-			[
 				"user",
 				"app/models/user.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
 			]
 		],
 		"width": 0.0
@@ -687,6 +924,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/codus/Projetos/gyp-pagamento/gyp-pagamento.sublime-project"
+			]
 		],
 		"width": 380.0
 	},

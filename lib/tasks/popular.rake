@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 task :popular => :environment do
-	nomes = ['do Chocolate', 'do Pastel', 'do Sushi', 'do Bolo', 'do Bife Com Batata Frita', 'da Picanha', 'da Lasanha', 'da Feijoada', 'do Camrao', 'do Frango Assado']
+	nomes = ['do Chocolate', 'do Pastel', 'do Sushi', 'do Bolo', 'do Bife Com Batata Frita', 'da Picanha', 'da Lasanha', 'da Feijoada', 'do Camarão', 'do Frango Assado']
 	eventos = ['Festa', 'Encontro', 'Balada']
 	elogios = ['Brilhante', 'Sensacional', 'Mega', 'Supimpa']
 
@@ -15,7 +15,8 @@ task :popular => :environment do
 			:dia => rand(20) + 1,
 			:mes => rand(12) + 1,
 			:ano => rand(2) + 2012,
-			:preco => "%.2f" % (rand(100)+rand(50)+rand).round(2)
+			:preco => "%.2f" % (rand(100)+rand(50)+rand).round(2),
+			:ativo => true
 		)
 	end
 end

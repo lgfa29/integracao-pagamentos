@@ -1,0 +1,87 @@
+<div class="page-header">
+	<h1>Cancelar Festas</h1>
+</div>
+
+<ul class="nav nav-tabs">
+	<li><%= link_to "Comprar Festa", :action => 'lista' %></li>
+	<li class="active"><%= link_to "Cancelar Festa", :action => 'cancelar_festa' %></li>
+</ul>
+
+<% if flash[:success] %>
+	<p class="alert alert-success"><%= flash[:success] %></p>
+<% end %>
+<% if flash[:error] %>
+	<p class="alert alert-error"><%= flash[:error] %></p>
+<% end %>
+
+<h3>Festas Ativas</h3>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Festa</th>
+			<th>Data</th>
+			<th>Local</th>
+			<th>Preço</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+<% if @festas_ativas.size > 0 %>
+<% @festas_ativas.each do |festa| %>
+		<tr>
+			<td>
+				<%= link_to festa.nome, :action => 'detalhes', :id => festa.id %>
+			</td>
+			<td><%= festa.data %></td>
+			<td><%= festa.local %></td>
+			<td>
+				<%= number_to_currency(festa.preco, :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %>
+			</td>
+			<td><%= link_to 'Cancelar', :action => 'realizar_cancelamento', :id => festa.id %></td>
+		</tr>
+<% end %>
+<% else %>
+		<tr><td colspan="5">Não há festas canceladas.</td></tr>
+<% end %>
+	</tbody>
+
+</table>
+
+<h3>Festas Canceladas</h3>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Festa</th>
+			<th>Data</th>
+			<th>Local</th>
+			<th>Preço</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+<% if @festas_canceladas.size > 0 %>
+<% @festas_canceladas.each do |festa| %>
+		<tr>
+			<td>
+				<%= link_to festa.nome, :action => 'detalhes', :id => festa.id %>
+			</td>
+			<td><%= festa.data %></td>
+			<td><%= festa.local %></td>
+			<td>
+				<%= number_to_currency(festa.preco, :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %>
+			</td>
+			<td><%= link_to 'Ativar', :action => 'realizar_ativamento', :id => festa.id %></td>
+		</tr>
+<% end %>
+<% else %>
+		<tr><td colspan="5">Não há festas canceladas.</td></tr>
+<% end %>
+	</tbody>
+
+</table>
+
+<%= link_to "Voltar", { :action => 'index' }, :class => "btn" %>
