@@ -11,7 +11,7 @@
 <table class="table table-bordered">
 	<thead>
 		<tr>
-			<th>ID da Transação</th>
+			<th>Cliente</th>
 			<th>Festa</th>
 			<th>Estornado</th>
 		</tr>
@@ -19,13 +19,12 @@
 
 	<tbody>
 <% @pedidos.each do |pedido| %>
-	<% produto = Produto.find(pedido.id_produto) %>
 		<tr>
-			<td><%= pedido.id_transacao %></td>
+			<td><%= pedido[:nome_cliente] %></td>
 			<td>
-				<%= link_to produto.nome, :action => 'detalhes', :id => produto.id %>
+				<%= link_to pedido[:produto].nome, :action => 'detalhes', :id => pedido[:produto].id %>
 			</td>
-			<td><%= pedido.estornado ? "Sim" : "Não" %></td>
+			<td><%= pedido[:pedido].estornado ? "Sim" : "Não" %></td>
 		</tr>
 <% end %>
 	</tbody>
