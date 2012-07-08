@@ -59,7 +59,8 @@ module WebServiceClient
         'NOSHIPPING' => '1',
         'METHOD' => metodo,
         'SOLUTIONTYPE' => 'Sole',
-        'LANDINGPAGE' => 'Billing'
+        'LANDINGPAGE' => 'Billing',
+        'LOCALECODE' => 'BR'
       }
 
       uri = URI.parse(@@paypal_nvp_url)

@@ -11,20 +11,25 @@
 <table class="table table-bordered">
 	<thead>
 		<tr>
-			<th>Cliente</th>
+			<th>ID Transação</th>
 			<th>Festa</th>
 			<th>Estornado</th>
 		</tr>
 	</thead>
 
 	<tbody>
-<% @pedidos.each do |pedido| %>
+<% @pedidos.each do |pedido| 
+	festa = Produto.find(pedido.id_produto)
+%>
+
 		<tr>
-			<td><%= pedido[:nome_cliente] %></td>
 			<td>
-				<%= link_to pedido[:produto].nome, :action => 'detalhes', :id => pedido[:produto].id %>
+				<%= link_to pedido.id_transacao, :action => 'detalhes_pedido', :id => pedido.id_transacao %>
 			</td>
-			<td><%= pedido[:pedido].estornado ? "Sim" : "Não" %></td>
+			<td>
+				<%= link_to festa.nome, :action => 'detalhes', :id => festa.id %>
+			</td>
+			<td><%= pedido.estornado ? "Sim" : "Não" %></td>
 		</tr>
 <% end %>
 	</tbody>

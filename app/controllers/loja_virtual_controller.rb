@@ -84,19 +84,14 @@ class LojaVirtualController < ApplicationController
 
 
 	def lista_pedidos
-		@pedidos = []
+		@pedidos = Pedido.all
+	end
 
-		Pedido.all.each do |pedido|
-			hash_pedido = {}
-
-			detalhes_pedido = obter_detalhes_da_transacao pedido.id_transacao
-
-			hash_pedido[:nome_cliente] = detalhes_pedido['FIRSTNAME']+' '+detalhes_pedido['LASTNAME']
-			hash_pedido[:produto] = Produto.find(pedido.id_produto)
-			hash_pedido[:pedido] = pedido
-
-			@pedidos << hash_pedido
-		end
+	def detalhes_pedido
+		pedido = Pedido.where(:id_transacao => params[:id])[0]
+		
+		@detalhes_pedido = obter_detalhes_da_transacao pedido.id_transacao
+		@festa = Produto.find pedido.id_produto
 	end
 
 	private

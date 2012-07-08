@@ -1,0 +1,43 @@
+<div class="page-header">
+	<h1>Loja Virtual</h1>
+</div>
+
+<div class="row">
+	<fieldset class="span6">
+		<legend>Comprador</legend>
+		<p>
+			<b>Nome:</b> <%= @detalhes_pedido["FIRSTNAME"]+' '+@detalhes_pedido["LASTNAME"] %>
+			<br />
+			<b>E-mail:</b> <%= @detalhes_pedido["EMAIL"] %>
+		</p>
+	</fieldset>
+
+	<fieldset class="span6">
+		<legend>Pagamento</legend>
+		<p>
+			<b>Valor:</b> <%= number_to_currency(@detalhes_pedido["AMT"], :unit => "R$ ", :precision => 2, :separator => ",", :delimiter => ".") %>
+			<br />
+			<b>Horário:</b> <%= @detalhes_pedido["ORDERTIME"] %>
+			<br />
+			<b>Status:</b> <%= @detalhes_pedido["PAYMENTSTATUS"] %>
+		</p>
+	</fieldset>
+</div>
+
+<div class="row">
+	<fieldset class="span12">
+		<legend>Festa</legend>
+		<p>
+			<b>Nome:</b> <%= @festa.nome %>
+			<br />
+			<b>Descrição:</b> <%= @festa.descricao %>
+			<br />
+			<b>Local:</b> <%= @festa.local %>
+			<br />
+			<b>Data:</b> <%= "#{@festa.dia}/#{@festa.mes}/#{@festa.ano}" %>
+
+		</p>
+	</fieldset>
+</div>
+
+<%= link_to "Voltar", { :action => 'lista_pedidos' }, :class => "btn" %>
