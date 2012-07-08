@@ -18,7 +18,12 @@
 		</b>
 	</p>
 
-	<%= link_to (image_tag'https://www.paypal.com/pt_BR/i/btn/btn_dg_pay_w_paypal.gif'), {:controller => 'loja_virtual', :action => 'checkout', :id => @festa.id}, :id => "submitBtn"  %>
+	<% if @festa.ativo %>
+		<%= link_to (image_tag'https://www.paypal.com/pt_BR/i/btn/btn_dg_pay_w_paypal.gif'), {:controller => 'loja_virtual', :action => 'checkout', :id => @festa.id}, :id => "submitBtn"  %>
+	<% else %>
+		<%= link_to 'Ativar', { :action => 'realizar_ativamento', :id => @festa.id }, :class => 'btn' %>
+	<% end %>
+
 </div>
 
 <%= link_to "Voltar", { :action => 'lista' }, :class => "btn" %>
